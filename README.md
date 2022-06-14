@@ -45,22 +45,11 @@ es decir, que quedó en el límite superior.
 
 
 
-Archivos adjuntos:
-1)	Peristaltic_Pump_Software_v1.09-wo_comments.ino allí se indica también dónde descargar las librerías necesarias.
-2)	Archivos FCStd y stl: (aclaración: en todo esto soy autodidacta. Es probable que no hayan sido diseñadas de la mejor manera posible… pero funcionan)
-a-	Rotor.FCStd
-b-	Rotor-A.stl (PETG)
-c-	Rotor-B.stl (PETG)
-
-d-	piezasCubreRotor-modificado.FCStd
-e-	piezasCubreRotor-modificado-inferior.stl
-f-	piezasCubreRotor-modificado-superior.stl
-El archivo (d) tiene un error que no entiendo, supongo uqe no impide imprimirlo. En caso de que haya algún problema, envío también las piezas originales que yo imprimí y luego tuve que agujerear
-g-	piezasCubreRotorOLD.FCStd (pieza superior e inferior OLD, son las que imprimí y les hice un orificio)
-h-	piezasCubreRotorOLD-inferior.stl
-i-	piezasCubreRotorOLD-superior.stl
-
-3- bomba-B.png es el archivo del circuito
+Archivos para impresión 3D:
+1)	Rotor-A.stl (PETG)
+2)	Rotor-B.stl (PETG)
+3) piezasCubreRotor-modificado-inferior.stl
+4) piezasCubreRotor-modificado-superior.stl
 
 Funcionamiento:
 Al encenderla, aparece en el display un menú con 11 opciones. Girando el control en sentido horario o antihorario se cambia de menú. Presionando la misma perilla, se entra en el menú y pueden seleccionarse opciones. Presionando nuevamente, se sale del menú.
