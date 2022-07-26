@@ -3,9 +3,10 @@ English version (Spanish version at the end)
 Peristaltic pump
 
 The Arduino code is based on https://www.thingiverse.com/thing:2619479/files and modified to meet my needs, especially related to calibration. 
-Food consistency changes a lot with temperature and a given number of pump head rotations can deliver different amounts of food at different temperatures. I designed a “by eye” calibration method.
+I designed a “by eye” calibration method.
+
 Two critical points to take into account:
--	Use PETG to print rotor pieces. It resists quite well up to 85ºC. On the other hand, PLA, the most frequently used material in 3D printing softens at 65C. The rest of the pieces were printed with PLA and work fine, at least for the moment.
+-	Use PETG to print rotor pieces. It resists quite well up to 85ºC. On the other hand, PLA, the most frequently used material for 3D printing softens at 65C. The rest of the pieces were printed with PLA and work fine, at least for the moment.
 -	Food temperature: We cook the fly food at 95ºC for 30 minutes. That high temperature softens PLA, and probably PETG. We now cook the food at 95 and let it cool (and maintain it at) 75ºC to deliver into the vials. It is very important to keep food at a constant temperature to deliver a reproducible volume. Food viscosity increases when temperate decreases and if the pump has been calibrated at a high temperature to deliver a given volume in a given number of rotations, then the volume delivered with the same number of rotations will be smaller when the food cools down.
 
 The design of the rotor is a modification of https://www.thingiverse.com/thing:3148717. I followed the designer recommendation to print with 100% infill. Remember to use PETG, at least for the rotor.
