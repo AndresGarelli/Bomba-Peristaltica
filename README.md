@@ -3,22 +3,23 @@ English version (Spanish version at the end)
 Peristaltic pump
 
 The Arduino code is based on https://www.thingiverse.com/thing:2619479/files and modified to meet my needs, especially related to calibration. 
-I designed a “by eye” calibration method.
+We do not need to fill the vials with an exact volume, so I designed a “by eye” calibration method.
 
 Two critical points to take into account:
 -	Use PETG to print rotor pieces. It resists quite well up to 85ºC. On the other hand, PLA, the most frequently used material for 3D printing softens at 65C. The rest of the pieces were printed with PLA and work fine, at least for the moment.
--	Food temperature: We cook the fly food at 95ºC for 30 minutes. That high temperature softens PLA, and probably PETG. We now cook the food at 95 and let it cool (and maintain it at) 75ºC to deliver into the vials. It is very important to keep food at a constant temperature to deliver a reproducible volume. Food viscosity increases when temperate decreases and if the pump has been calibrated at a high temperature to deliver a given volume in a given number of rotations, then the volume delivered with the same number of rotations will be smaller when the food cools down.
+-	Food temperature: We cook the fly food at 95ºC for 30 minutes. That high temperature softens PLA, and probably PETG. We now cook the food at 95 and let it cool (and maintain it at) 75ºC to deliver into the vials. It is very important to keep food at a constant temperature to deliver a reproducible volume. Food viscosity increases when temperate decreases and if the pump has been calibrated at a high temperature to deliver a given volume in a given number of rotations, then the volume delivered by the same number of rotations will be smaller when the food cools down.
 
 The design of the rotor is a modification of https://www.thingiverse.com/thing:3148717. I followed the designer recommendation to print with 100% infill. Remember to use PETG, at least for the rotor.
 
 Two different calibration values can be saved in the programs named “moscas” (flies) and “gusanos” (worms). If necessary, those names can be changed in lines 161 and 162 of the code.
 
-The cover of the hose is kept in place by two long screws. If the cover is too loose, the rotor will not make enough pressure onto the hose and the food will not be pumped. If it is too tight, it will block the motor. The exact position should be found by trial and error. If you find that my design does not work in your hands, you can try with the original one https://www.thingiverse.com/thing:3148717.
+The pressure of the cover over the hose is adjusted with two long screws. If the cover is too loose, the rotor will not make enough pressure onto the hose and the food will not be pumped. If it is too tight, it will block the motor. The exact position should be found by trial and error. If you find that my design does not work in your hands, you can try with the original one https://www.thingiverse.com/thing:3148717.
 
 A few comments on the electronic circuit. There are three things that are optional and can be removed. The first one is the possibility to activate the pump with a pedal. We found that it was not necessary after adding the option to repeat pumping cycles to the code. The second one are the three LEDs that indicate the mode of operation that is selected. The same information is shown in the screen. The last one is the fan to cool the motor and the motor driver. It does not seem necessary since none of them gets too hot during operation.
  
 
 Bill of Materials (with links to suppliers in Argentina)
+
 1- Stepper motor, 1.5A high Torque 4.2kg 17HS4401S   x1 https://articulo.mercadolibre.com.ar/MLA-899670687-nema-17-motor-paso-a-paso-18-alto-t-15a-usongshine-_JM
 2- Bearings  605zz	x9	https://articulo.mercadolibre.com.ar/MLA-915854069-rodamiento-ruleman-605-zz-x20-unidades-_JM
 3- driver A4899		x1 https://www.todomicro.com.ar/motores-y-drivers-motores/288-modulo-a4988-pololu-driver-motor-paso-a-paso.html
@@ -35,7 +36,7 @@ Bill of Materials (with links to suppliers in Argentina)
 14- silicone hose, external diameter 10mm, inner diameter 6mm (walls 2mm). 
 15- nuts, bolts, screws, etc
 
-It is critical limit the current through the motor driver!
+It is critical to limit the current through the motor driver!
 
 This is VERY important. If this is not correctly done the motor can be damaged. For a detailed explanation, visit this webpage: https://www.pololu.com/product/1182
 I used a cheap driver that does not have the same resistor values as the original one. This has to be taken into account when setting the current limit.  I provide the details of the procedure for my motor and driver, you should do your own calculations:
@@ -48,7 +49,6 @@ Resistor: R100 0.1Ohm or 100 mOhm
 Vref= 1.2V
 
 The driver is configured to work in a quarter steps  mode with a logic level of 5V.
-
 Turn the potentiometer of the driver until you get the Vref. In my case, I had to put the potentiometer at the max max level to get a  Vref of 1.19V.
 
 
